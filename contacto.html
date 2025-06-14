@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Librería de íconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <img src="./img/logo-uade-transparente.png" alt="Logo UADE" class="logo">
+            <h1>Licenciatura en Gestión de Tecnología de la Información</h1>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-toggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Lista de links -->
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="avisos.html"><i class="fas fa-bell"></i> Avisos</a></li>
+                <li><a href="sobremi.html"><i class="fas fa-user"></i> Sobre mí</a></li>
+                <li><a href="materias2025.html"><i class="fas fa-book"></i> Materias 2025</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Contacto</h2>
+            <p>Si tienes alguna consulta o comentario, por favor completa el siguiente formulario y me pondré en contacto contigo a la brevedad.</p>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© <strong>2025 Daniela Páez De Miguel</strong><br><br>
+                Todos los derechos reservados.<br>
+                Proyecto realizado como parte de la materia Diseño y Desarrollo WEB.</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/danielapdem" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:dpaezdemiguel@uade.edu.ar"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PARA BOTÓN HAMBURGUESA -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+
+    <!-- Tu nuevo script de validación -->
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

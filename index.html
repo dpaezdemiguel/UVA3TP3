@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Organización cuatrimestre</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Librería de íconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <img src="./img/logo-uade-transparente.png" alt="Logo UADE" class="logo">
+            <h1>Licenciatura en Gestión de Tecnología de la Información</h1>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-toggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Lista de links -->
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="avisos.html"><i class="fas fa-bell"></i> Avisos</a></li>
+                <li><a href="sobremi.html"><i class="fas fa-user"></i> Sobre mí</a></li>
+                <li><a href="materias2025.html"><i class="fas fa-book"></i> Materias 2025</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Materias del 1er Cuatrimestre</h2>
+            <p>Las siguientes son las asignaturas que estoy cursando actualmente.</p>    
+
+            <div class="table-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Día</th>
+                            <th>Horario</th>
+                            <th>Profesor/a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arquitectura de Computadores</td>
+                            <td>Lunes</td>
+                            <td>18:30 a 20:30 hrs</td>
+                            <td>Leonardo Prieto</td>
+                        </tr>
+                        <tr>
+                            <td>Sistemas de Información I</td>
+                            <td>Martes</td>
+                            <td>18:30 a 20:30 hrs</td>
+                            <td>Marcelo Tadey</td>
+                        </tr>
+                        <tr>
+                            <td>Introducción a la Algoritmia</td>
+                            <td>Miércoles</td>
+                            <td>18:30 a 20:30 hrs</td>
+                            <td>Guillermo Maquieira</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing</td>
+                            <td>Jueves</td>
+                            <td>18:30 a 20:30 hrs</td>
+                            <td>Monica Comesaña</td>
+                        </tr>
+                        <tr>
+                            <td>Diseño y Desarrollo WEB</td>
+                            <td>Viernes</td>
+                            <td>18:30 a 20:30 hrs</td>
+                            <td>Patricia Litovicius</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© <strong>2025 Daniela Páez De Miguel</strong><br><br>
+                Todos los derechos reservados.<br>
+                Proyecto realizado como parte de la materia Diseño y Desarrollo WEB.</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/danielapdem" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:dpaezdemiguel@uade.edu.ar"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PARA BOTÓN HAMBURGUESA -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
