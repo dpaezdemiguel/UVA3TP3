@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Diseño y Desarrollo WEB</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
 
     <!-- Librería de íconos Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
@@ -15,31 +21,42 @@
     <!-- HEADER -->
     <header class="header">
         <div class="header-content">
-            <img src="./img/logo-uade-transparente.png" alt="Logo UADE" class="logo">
+            <img
+              src="./img/logo-uade-transparente.png"
+              alt="Logo UADE"
+              class="logo"
+            />
             <h1>Licenciatura en Gestión de Tecnología de la Información</h1>
         </div>
-        <div class="modo-toggle">
-            <button id="modo-claro">🌞 Claro</button>
-            <button id="modo-oscuro">🌙 Oscuro</button>
+        <div class="modo-toggle" role="region" aria-label="Cambiar modo de visualización">
+            <button id="modo-claro" aria-pressed="false">🌞 Claro</button>
+            <button id="modo-oscuro" aria-pressed="false">🌙 Oscuro</button>
         </div>
     </header>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
         <div class="nav-container">
 
             <!-- Botón hamburguesa -->
-            <button id="menu-toggle" class="menu-toggle">
+            <button
+              id="menu-toggle"
+              class="menu-toggle"
+              aria-controls="nav-links"
+              aria-expanded="false"
+              aria-label="Mostrar menú de navegación"
+            >
                 <i class="fas fa-bars"></i>
             </button>
 
             <!-- Lista de links -->
-            <ul id="nav-links" class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="avisos.html"><i class="fas fa-bell"></i> Avisos</a></li>
-                <li><a href="sobremi.html"><i class="fas fa-user"></i> Sobre mí</a></li>
-                <li><a href="materias2025.html"><i class="fas fa-book"></i> Materias 2025</a></li>
-                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="materias2025.html">Materias 2025</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="diseño-desarrollo-web.html" class="activo" aria-current="page">Diseño Web</a></li>
+                <li><a href="avisos.html">Avisos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -48,116 +65,142 @@
     <main class="container">
         <section class="section">
             <h2 class="section-title">Diseño y Desarrollo WEB</h2>
-            <p>El Diseño y Desarrollo Web es una disciplina que abarca la planificación, creación y mantenimiento de sitios web y aplicaciones web. El diseño web se centra en la estética, usabilidad y experiencia del usuario, mientras que el desarrollo web se enfoca en la implementación técnica y la funcionalidad de los sitios.</p>
+            <p>
+              El Diseño y Desarrollo Web es una disciplina que abarca la planificación, creación y mantenimiento de sitios web y aplicaciones web. El diseño web se centra en la estética, usabilidad y experiencia del usuario, mientras que el desarrollo web se enfoca en la implementación técnica y la funcionalidad de los sitios.
+            </p>
 
             <section class="seccion especifica">
                 <!-- Fechas de exámenes -->
-                <section class="caracteristicas examenes">
-                    <h3>Fechas de exámenes</h3>
-                    <br>
-                    <p><strong>1er parcial</strong><br>25/Abril/2025</p>
-                    <br>
-                    <p><strong>Proyecto Grupal - Avances</strong><br>26/Mayo/2025</p>
-                    <br>
-                    <p><strong>2do parcial</strong><br>13/Junio/2025</p>
-                    <br>
-                    <p><strong>Proyecto Grupal - Entrega final</strong><br>17/Junio/2025</p>
-                    <br>
-                    <p><strong>Defensa Proyecto Grupal</strong><br>27/Junio/2025</p>
-                    <br>
-                    <p><strong>Recuperatorio/Final adelantado</strong><br>04/Julio/2025</p>
-                    <br>
-                    <p><strong>Final regular</strong><br>18/Julio/2025</p>
+                <section class="caracteristicas examenes" aria-labelledby="fechas-examenes">
+                    <h3 id="fechas-examenes">Fechas de exámenes</h3>
+                    <br />
+                    <p><strong>1er parcial</strong><br />25/Abril/2025</p>
+                    <br />
+                    <p><strong>Proyecto Grupal - Avances</strong><br />26/Mayo/2025</p>
+                    <br />
+                    <p><strong>2do parcial</strong><br />13/Junio/2025</p>
+                    <br />
+                    <p><strong>Proyecto Grupal - Entrega final</strong><br />17/Junio/2025</p>
+                    <br />
+                    <p><strong>Defensa Proyecto Grupal</strong><br />27/Junio/2025</p>
+                    <br />
+                    <p><strong>Recuperatorio/Final adelantado</strong><br />04/Julio/2025</p>
+                    <br />
+                    <p><strong>Final regular</strong><br />18/Julio/2025</p>
                 </section>
 
                 <!-- Actividades UVAs -->
-                <section class="caracteristicas uvas">
-                    <h3>Actividades UVAs</h3>
-                    <br>
+                <section class="caracteristicas uvas" aria-labelledby="actividades-uvas">
+                    <h3 id="actividades-uvas">Actividades UVAs</h3>
+                    <br />
                     <div class="uva">
                         <h4><b>UVA 1</b></h4>
-                        <br>
-                        <p><strong>TP1: HTML - Introducción</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA1TP1" target="_blank"> Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA1TP1/" target="_blank">GitHub Pages</a></p>
+                        <br />
+                        <p>
+                          <strong>TP1: HTML - Introducción</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA1TP1" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA1TP1/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP2: HTML - Etiquetas</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA1TP2" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA1TP2/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP2: HTML - Etiquetas</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA1TP2" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA1TP2/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP3: Ejercicio integrador HTML</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA1EjIntegrador" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA1EjIntegrador/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP3: Ejercicio integrador HTML</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA1EjIntegrador" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA1EjIntegrador/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
                     </div>
-                    <br>
+                    <br />
                     <div class="uva">
                         <h4><b>UVA 2</b></h4>
-                        <br>
-                        <p><strong>TP4: Formato de texto</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA2TP1" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA2TP1/" target="_blank">GitHub Pages</a></p>
+                        <br />
+                        <p>
+                          <strong>TP4: Formato de texto</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA2TP1" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA2TP1/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP5: Formato de cajas</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA2TP2" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA2TP2/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP5: Formato de cajas</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA2TP2" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA2TP2/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP6: Unidades de medida</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA2TP3" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA2TP3/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP6: Unidades de medida</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA2TP3" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA2TP3/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP7: Grid y Flexbox</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA2TP4" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA2TP4/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP7: Grid y Flexbox</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA2TP4" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA2TP4/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP8: Ejercicio integrador CSS</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA2EjIntegrador" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA2EjIntegrador/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP8: Ejercicio integrador CSS</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA2EjIntegrador" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA2EjIntegrador/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
                     </div>
-                    <br>
+                    <br />
                     <div class="uva">
                         <h4><b>UVA 3</b></h4>
-                        <br>
-                        <p><strong>TP9: JavaScript (JS)</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA3TP1.3" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA3TP1.3/" target="_blank">GitHub Pages</a></p>
+                        <br />
+                        <p>
+                          <strong>TP9: JavaScript (JS)</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA3TP1.3" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA3TP1.3/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP10: Ejercicio integrador - Formulario JavaScript</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA3TP2" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA3TP2/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP10: Ejercicio integrador - Formulario JavaScript</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA3TP2" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA3TP2/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
 
-                        <p><strong>TP11: Ejercicio integrador - Modo claro y oscuro JavaScript</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA3TP3" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA3TP3/" target="_blank">GitHub Pages</a></p>
+                        <p>
+                          <strong>TP11: Ejercicio integrador - Modo claro y oscuro JavaScript</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA3TP3" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA3TP3/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
                     </div>
-                    <br>
+                    <br />
                     <div class="uva">
                         <h4><b>UVA 4</b></h4>
-                        <br>
-                        <p><strong>TP12: Integración con GitHub</strong><br>
-                        <a href="https://github.com/dpaezdemiguel/UVA4TP1" target="_blank">Repositorio GitHub</a> |
-                        <a href="https://dpaezdemiguel.github.io/UVA4TP1/" target="_blank">GitHub Pages</a></p>
+                        <br />
+                        <p>
+                          <strong>TP12: Integración con GitHub</strong><br />
+                          <a href="https://github.com/dpaezdemiguel/UVA4TP1" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a> |
+                          <a href="https://dpaezdemiguel.github.io/UVA4TP1/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        </p>
                     </div>
                 </section>
 
                 <!-- Bibliografía -->
-                <section class="caracteristicas bibliografia">
-                    <h3>Bibliografía</h3>
-                    <br>
+                <section class="caracteristicas bibliografia" aria-labelledby="bibliografia">
+                    <h3 id="bibliografia">Bibliografía</h3>
+                    <br />
                     <p>Niederst Robbins, Jennifer <i>HTML5 pocket reference</i></p>
-                    <br>
+                    <br />
                     <p>Meyer, Eric <i>CSS pocket reference</i></p>
-                    <br>
+                    <br />
                     <p>Scott, Emmit <i>SPA Design and Architecture: Understanding Single Page Web Applications</i></p>
-                    <br>
+                    <br />
                     <p>Schulz, Ralph G. <i>Diseño web con CSS</i></p>
-                    <br>
-                    <p><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></p>
+                    <br />
+                    <p><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3 Schools</a></p>
                 </section>
 
-                <!-- Informacion curso -->
-                <section class="informacion-materia">
-                    <h3>Información de la materia</h3>
-                    <br>
+                <!-- Información curso -->
+                <section class="informacion-materia" aria-labelledby="info-materia">
+                    <h3 id="info-materia">Información de la materia</h3>
+                    <br />
                     <p>Curso: 15130</p>
                     <p>Profesora: Patricia Litovicius</p>
                 </section>
@@ -168,22 +211,33 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© <strong>2025 Daniela Páez De Miguel</strong><br><br>
-                Todos los derechos reservados.<br>
-                Proyecto realizado como parte de la materia Diseño y Desarrollo WEB.</p>
+            <p>
+              © <strong>2025 Daniela Páez De Miguel</strong><br /><br />
+              Todos los derechos reservados.<br />
+              Proyecto realizado como parte de la materia Diseño y Desarrollo WEB.
+            </p>
 
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/danielapdem" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:dpaezdemiguel@uade.edu.ar"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/danielapdem" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="mailto:dpaezdemiguel@uade.edu.ar"
+                  ><i class="fas fa-envelope"></i
+                ></a>
             </div>
         </div>
     </footer>
 
     <!-- SCRIPT PARA BOTÓN HAMBURGUESA -->
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('nav-links').classList.toggle('active');
-        });
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+        navLinks.classList.toggle("active");
+      });
     </script>
 
     <!-- Script JS -->

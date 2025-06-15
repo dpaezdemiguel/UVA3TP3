@@ -75,13 +75,14 @@ body.modo-oscuro .header h1 {
     border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
-    background-color: #7FA2DB;
+    background-color: #5625DB;
     color: white;
     transition: background-color 0.3s;
 }
 
-.modo-toggle button:hover {
-    background-color: #9175DB;
+.modo-toggle button:hover,
+button[type="submit"]:hover {
+    background-color: #3e1db7;
 }
 
 /* NAVBAR */
@@ -108,20 +109,31 @@ body.modo-oscuro .header h1 {
 }
 
 .nav-links li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    background-color: #7FA2DB;
+    background-color: #5C87E3; /* mejor contraste */
     padding: 10px 20px;
     border-radius: 20px;
-    transition: background-color 0.3s;
-    display: flex;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.nav-links li a:hover {
-    background-color: #9175DB;
+.nav-links li a:hover,
+.nav-links li a:focus-visible {
+    background-color: #4569c5;
+    outline: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.nav-links li a.activo {
+    border: 2px solid #9A3BDB;
+    box-shadow: 0 0 0 3px rgba(154, 59, 219, 0.4);
 }
 
 .menu-toggle {
@@ -131,6 +143,28 @@ body.modo-oscuro .header h1 {
     font-size: 24px;
     color: white;
     cursor: pointer;
+}
+
+/* ESTADOS DE FOCO PARA ACCESIBILIDAD */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #9A3BDB;
+    outline-offset: 3px;
+}
+
+/* CONTRASTE PARA BOTONES DE FORMULARIO */
+button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #5625DB;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
 }
 
 /* SECCIONES GENERALES */
@@ -404,6 +438,17 @@ button[type="submit"]:hover {
     transform: scale(1.05);
 }
 
+/* BOTÓN ACTIVO EN NAVBAR - MODO CLARO: BORDE BLANCO */
+.nav-links li a.activo {
+    border: 2px solid white;
+    background-color: #9175DB;
+}
+
+/* BOTÓN ACTIVO EN NAVBAR - MODO OSCURO: BORDE VIOLETA */
+body.modo-oscuro .nav-links li a.activo {
+    border: 2px solid #9A3BDB;
+}
+
 /* MODO OSCURO */
 body.modo-oscuro {
     background-color: #121212;
@@ -436,12 +481,31 @@ body.modo-oscuro .table-wrapper {
 }
 
 body.modo-oscuro .nav-links li a {
-    background-color: #333;
     color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
 }
 
-body.modo-oscuro .nav-links li a:hover {
+body.modo-oscuro .nav-links li a:hover,
+body.modo-oscuro .nav-links li a:focus-visible {
     background-color: #555;
+    outline: none;
+    border: 2px solid #9A3BDB;
+    box-shadow: 0 0 0 3px rgba(154, 59, 219, 0.6);
+}
+
+body.modo-oscuro .nav-links li a.activo {
+    border: 2px solid #9A3BDB;
+    box-shadow: 0 0 0 3px rgba(154, 59, 219, 0.6);
 }
 
 body.modo-oscuro .schedule-table tr:nth-child(even) {

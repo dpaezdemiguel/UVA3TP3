@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email");
     const mensaje = document.getElementById("mensaje");
 
-    // Aplicar estilos a los inputs si existen
     if (form && nombre && email && mensaje) {
         [nombre, email, mensaje].forEach(input => {
             input.style.border = "2px solid #5625DB";
@@ -65,5 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
         activarModoOscuro();
     } else {
         activarModoClaro();
+    }
+
+    // Menú hamburguesa accesible
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const expanded = navLinks.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', expanded);
+            menuToggle.setAttribute('aria-label', expanded ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+            menuToggle.setAttribute('title', expanded ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+        });
     }
 });
